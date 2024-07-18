@@ -25,12 +25,29 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="36"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" Grid.Column="0" x:Name="__app_titlebar" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TitleBar
+                Name="titlebar"
+                Title="UniGetUI"
+                IsPaneToggleButtonVisible="False"
+                IsBackButtonVisible="False"
+                Subtitle="formerly WingetUI">
+                <TitleBar.IconSource>
+                    <ImageIconSource ImageSource="ms-appx:///Assets/Images/icon.png" />
+                </TitleBar.IconSource>
+                <TextBox 
+                    Name="GenericSearchBox" 
+                    Width="400" 
+                    PlaceholderText="Search anything" 
+                    Margin="4,0,4,0" Height="30"
+                    >
+                </TextBox>
+            </TitleBar>
+            <!--Border Grid.Row="0" Grid.Column="0" x:Name="__app_titlebar" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="12,8,12,8" Spacing="10">
                     <Image VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="16" Height="16" >
                         <Image.Source>
@@ -39,7 +56,7 @@
                     </Image>
                     <widgets:TranslatedTextBlock x:Name="AppTitle" Text="WingetUI" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="12"/>
                 </StackPanel>
-            </Border>
+            </Border-->
             <InfoBar Name="UpdatesBanner" x:FieldModifier="public" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsOpen="False" Visibility="{x:Bind UpdatesBanner.IsOpen, Mode=OneWay}" Margin="0,0,0,4" CornerRadius="0" BorderThickness="0,1,0,1"/>
             <InfoBar Name="ErrorBanner" x:FieldModifier="public" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" IsOpen="False" Visibility="{x:Bind ErrorBanner.IsOpen, Mode=OneWay}" Margin="0,0,0,4" Severity="Error" CornerRadius="0" BorderThickness="0,1,0,1"/>
         </Grid>
