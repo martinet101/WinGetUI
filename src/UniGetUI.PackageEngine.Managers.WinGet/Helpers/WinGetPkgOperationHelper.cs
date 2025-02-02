@@ -115,7 +115,6 @@ internal sealed class WinGetPkgOperationHelper : PackagePkgOperationHelper
             Logger.Error(ex);
         }
 
-
         return parameters;
     }
 

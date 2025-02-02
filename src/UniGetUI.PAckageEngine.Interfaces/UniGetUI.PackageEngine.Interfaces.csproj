@@ -2,23 +2,17 @@
 
 	<PropertyGroup>
 		<TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
 		<RuntimeIdentifier>win-$(Platform)</RuntimeIdentifier>
 		<Platforms>x64</Platforms>
-		<TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
-		<SdkVersion>8.0.404</SdkVersion>
 		<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
 		<PublishSelfContained>true</PublishSelfContained>
 		<FileVersion>3.1.0.0</FileVersion>
 		<InformationalVersion>3.1.0-beta0</InformationalVersion>
 		<Product>UniGetUI</Product>
-		<Authors>Martí Climent and the contributors</Authors>
-		<PublisherName>Martí Climent</PublisherName>
 		<ApplicationVersion>3.1.0-beta0</ApplicationVersion>
 		<Copyright>2025, Martí Climent</Copyright>
-		<Nullable>enable</Nullable>
 		<Configurations>Debug;Release</Configurations>
 	</PropertyGroup>
 

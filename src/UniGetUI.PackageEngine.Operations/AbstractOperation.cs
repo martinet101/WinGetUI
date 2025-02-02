@@ -119,7 +119,6 @@ public abstract class AbstractOperation : IDisposable
 
     private AbstractOperation? requirement;
 
-
     public AbstractOperation(bool queue_enabled, AbstractOperation? req)
     {
         QUEUE_ENABLED = queue_enabled;
@@ -270,7 +269,6 @@ public abstract class AbstractOperation : IDisposable
                             break;
                         }
                     }
-
 
                     Task<OperationVeredict> op = PerformOperation();
                     while (Status != OperationStatus.Canceled && !op.IsCompleted) await Task.Delay(100);

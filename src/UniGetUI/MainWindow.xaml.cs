@@ -249,7 +249,6 @@ namespace UniGetUI.Interface
                 string ManagerName = Regex.Match(baseUrl, "managerName=([^&]+)").Value.Split("=")[^1];
                 string SourceName = Regex.Match(baseUrl, "sourceName=([^&]+)").Value.Split("=")[^1];
 
-
                 if (Id != "" && CombinedManagerName != "" && ManagerName == "" && SourceName == "")
                 {
                     Logger.Warn($"URI {link} follows old scheme");

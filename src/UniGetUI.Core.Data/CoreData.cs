@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.Net;
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
@@ -283,7 +283,6 @@ namespace UniGetUI.Core.Data
             TypeInfoResolverChain = { new DefaultJsonTypeInfoResolver() },
             WriteIndented = true,
         };
-
 
         private static int GetCodePage()
         {

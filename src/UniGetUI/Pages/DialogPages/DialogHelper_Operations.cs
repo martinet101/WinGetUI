@@ -18,11 +18,12 @@ public static partial class DialogHelper
     {
         ContentDialog dialog = new()
         {
-            Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style, XamlRoot = Window.XamlRoot
+            Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style, XamlRoot = Window.XamlRoot,
+            Resources = { ["ContentDialogMaxWidth"] = 850,
+                ["ContentDialogMaxHeight"] = 800,
+            },
+            Title = operation.Metadata.FailureTitle,
         };
-        dialog.Resources["ContentDialogMaxWidth"] = 850;
-        dialog.Resources["ContentDialogMaxHeight"] = 800;
-        dialog.Title = operation.Metadata.FailureTitle;
 
         Grid grid = new()
         {
@@ -106,7 +107,7 @@ public static partial class DialogHelper
         Grid.SetRow(headerContent, 0);
         Grid.SetRow(ScrollView, 1);
 
-        var CloseButton = new Button()
+        var CloseButton = new Button
         {
             Content = CoreTools.Translate("Close"), HorizontalAlignment = HorizontalAlignment.Stretch, Height = 30,
         };
@@ -116,10 +117,10 @@ public static partial class DialogHelper
         };
         Control _retryButton;
 
-        var retryOptions = opControl.GetRetryOptions(() => dialog.Hide());
+        var retryOptions = opControl.GetRetryOptions(dialog.Hide);
         if (retryOptions.Any())
         {
-            SplitButton RetryButton = new SplitButton()
+            SplitButton RetryButton = new SplitButton
             {
                 Content = CoreTools.Translate("Retry"),
                 HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -141,7 +142,7 @@ public static partial class DialogHelper
         }
         else
         {
-            var RetryButton = new Button()
+            var RetryButton = new Button
             {
                 Content = CoreTools.Translate("Retry"),
                 HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -163,8 +164,8 @@ public static partial class DialogHelper
             HorizontalAlignment = HorizontalAlignment.Stretch,
             Background = (Brush)Application.Current.Resources["ApplicationPageBackgroundThemeBrush"]
         };
-        sp.ColumnDefinitions.Add(new ColumnDefinition(){Width = new(1, GridUnitType.Star)});
-        sp.ColumnDefinitions.Add(new ColumnDefinition(){Width = new(1, GridUnitType.Star)});
+        sp.ColumnDefinitions.Add(new ColumnDefinition {Width = new(1, GridUnitType.Star)});
+        sp.ColumnDefinitions.Add(new ColumnDefinition {Width = new(1, GridUnitType.Star)});
         sp.Children.Add(_retryButton);
         Grid.SetColumn(CloseButton, 1);
         sp.Children.Add(CloseButton);

@@ -1,0 +1,16 @@
+<Project>
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+        <WindowsSdkPackageVersion>10.0.26100.53</WindowsSdkPackageVersion>
+        <SdkVersion>8.0.404</SdkVersion>
+        <Authors>Martí Climent and the contributors</Authors>
+        <PublisherName>Martí Climent</PublisherName>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+</Project>

@@ -83,6 +83,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniGetUI.Interface.Backgrou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5F60EF3-4347-4294-9CD9-B756027B6321}"
 	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
 		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
 	EndProjectSection
 EndProject

@@ -48,3 +48,7 @@ jobs:
     - name: Run Tests
       working-directory: src
       run: dotnet test --no-restore --verbosity q --nologo
+
+    - name: Test publish
+      working-directory: src
+      run: dotnet publish --configuration Release --no-restore

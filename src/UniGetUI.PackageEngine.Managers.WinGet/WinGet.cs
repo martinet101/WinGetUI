@@ -259,8 +259,6 @@ namespace UniGetUI.PackageEngine.Managers.WingetManager
             }
         }
 
-
-
         public override void RefreshPackageIndexes()
         {
             Process p = new()
